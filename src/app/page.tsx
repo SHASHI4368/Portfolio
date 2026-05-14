@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Lenis from "lenis";
 import { Loader } from "@/components/layout/Loader";
+import { Header } from "@/components/layout/Header";
 import { FloatingDock } from "@/components/layout/FloatingDock";
 import { ScrollyCanvas } from "@/components/canvas/ScrollyCanvas";
 import { AboutMe } from "@/components/sections/AboutMe";
@@ -44,15 +45,15 @@ export default function Home() {
     <main className="bg-background min-h-screen text-white">
       {!isLoaded && <Loader onLoadComplete={() => setIsLoaded(true)} />}
 
-      {/* Main Content (only visible after loading is complete to prevent scroll jumping and ensure clean initialization) */}
       <div className={`transition-opacity duration-1000 ${isLoaded ? "opacity-100" : "opacity-0 h-screen overflow-hidden"}`}>
-        <ScrollyCanvas />
-        <AboutMe />
-        <TechStack />
-        <ExperienceTimeline />
-        <EducationTimeline />
-        <ProjectShowcase />
-        <Certificates />
+        <Header />
+        <div id="home"><ScrollyCanvas /></div>
+        <div id="about"><AboutMe /></div>
+        <div id="stack"><TechStack /></div>
+        <div id="experience"><ExperienceTimeline /></div>
+        <div id="education"><EducationTimeline /></div>
+        <div id="projects"><ProjectShowcase /></div>
+        <div id="certificates"><Certificates /></div>
         <Footer />
         <FloatingDock />
       </div>
