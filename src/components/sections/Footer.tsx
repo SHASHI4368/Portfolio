@@ -10,7 +10,6 @@ export function Footer() {
 
   return (
     <footer className="relative w-full py-20 px-6 lg:px-12 bg-[#050505] flex flex-col items-center justify-center overflow-hidden border-t border-white/5">
-      <div className="absolute inset-0 noise-overlay" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-white/[0.02] rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between z-10 relative">

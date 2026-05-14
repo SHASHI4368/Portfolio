@@ -56,8 +56,6 @@ export default function Home() {
         <Footer />
         <FloatingDock />
       </div>
-      
-      <div className="noise-overlay" />
     </main>
   );
 }
