@@ -4,32 +4,34 @@ import { motion } from "framer-motion";
 
 export function AboutMe() {
   return (
-    <section className="relative w-full py-32 px-6 lg:px-12 bg-[#121212] flex items-center justify-center">
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+    <section className="relative w-full py-16 sm:py-24 lg:py-32 px-5 sm:px-8 lg:px-12 bg-[#121212] flex items-center justify-center overflow-hidden">
+      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
+        {/* Left column — heading */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-sm tracking-[0.3em] uppercase text-white/50 mb-4">
+          <h2 className="text-xs sm:text-sm tracking-[0.3em] uppercase text-white/50 mb-3 sm:mb-4">
             About Me
           </h2>
-          <h3 className="text-4xl md:text-6xl font-medium tracking-tight text-white mb-8">
-            Building Modern Software <br className="hidden md:block" />
+          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-6 sm:mb-8 leading-tight">
+            Building Modern Software <br className="hidden sm:block" />
             <span className="text-white/60">with Purpose.</span>
           </h3>
-          <div className="w-20 h-1 bg-white/20 mb-8" />
+          <div className="w-16 sm:w-20 h-1 bg-white/20 mb-6 sm:mb-8" />
         </motion.div>
 
+        {/* Right column — body text */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg text-white/70 leading-relaxed font-light"
+          className="text-base sm:text-lg text-white/70 leading-relaxed font-light"
         >
-          <div className="space-y-6 max-w-2xl">
+          <div className="space-y-4 sm:space-y-6">
             <p className="text-slate-400 leading-relaxed">
               My journey in tech started with a deep curiosity about how complex
               systems work under the hood, leading me to pursue Computer
@@ -65,7 +67,7 @@ export function AboutMe() {
       </div>
 
       {/* Background ambient light */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/[0.02] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] lg:w-[800px] h-[400px] sm:h-[600px] lg:h-[800px] bg-white/[0.02] rounded-full blur-[120px] pointer-events-none" />
     </section>
   );
 }

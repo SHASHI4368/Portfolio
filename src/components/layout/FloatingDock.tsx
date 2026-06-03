@@ -1,9 +1,8 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useRef } from "react";
 import { Mail, Phone, FileText } from "lucide-react";
-import Link from "next/link";
 
 const Github = ({ className }: { className?: string }) => (
   <svg
@@ -40,16 +39,16 @@ function MagneticButton({
   children,
   href,
   label,
+  isMobile,
 }: {
   children: React.ReactNode;
   href: string;
   label: string;
+  isMobile?: boolean;
 }) {
   const ref = useRef<HTMLAnchorElement>(null);
-
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-
   const springConfig = { damping: 15, stiffness: 150, mass: 0.1 };
   const springX = useSpring(x, springConfig);
   const springY = useSpring(y, springConfig);
@@ -57,14 +56,8 @@ function MagneticButton({
   const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!ref.current) return;
     const rect = ref.current.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    const mouseX = e.clientX - rect.left - width / 2;
-    const mouseY = e.clientY - rect.top - height / 2;
-
-    // Magnetic pull distance
-    x.set(mouseX * 0.3);
-    y.set(mouseY * 0.3);
+    x.set((e.clientX - rect.left - rect.width / 2) * 0.3);
+    y.set((e.clientY - rect.top - rect.height / 2) * 0.3);
   };
 
   const handleMouseLeave = () => {
@@ -83,15 +76,18 @@ function MagneticButton({
       style={{ x: springX, y: springY }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="relative flex h-12 w-12 items-center justify-center rounded-full bg-white/5 text-white/70 transition-colors hover:bg-white/10 hover:text-white glass group"
+      aria-label={label}
+      className="relative flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-white/5 text-white/70 transition-colors hover:bg-white/10 hover:text-white glass group"
     >
       {children}
-      {/* Tooltip for desktop (left) */}
+
+      {/* Desktop tooltip — appears to the left of the button */}
       <span className="absolute right-full mr-4 px-3 py-1.5 bg-black/60 text-white text-xs rounded opacity-0 -translate-x-2 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 hidden md:block whitespace-nowrap backdrop-blur-md border border-white/10">
         {label}
       </span>
-      {/* Tooltip for mobile (top) */}
-      <span className="absolute bottom-full mb-4 px-3 py-1.5 bg-black/60 text-white text-xs rounded opacity-0 translate-y-2 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 md:hidden whitespace-nowrap backdrop-blur-md border border-white/10">
+
+      {/* Mobile tooltip — appears above the button */}
+      <span className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-black/60 text-white text-xs rounded opacity-0 translate-y-1 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 md:hidden whitespace-nowrap backdrop-blur-md border border-white/10">
         {label}
       </span>
     </motion.a>
@@ -104,33 +100,51 @@ export function FloatingDock() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1, duration: 0.8 }}
-      className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 md:left-auto md:right-8 md:translate-x-0 md:top-1/2 md:-translate-y-1/2 md:bottom-auto"
+      // Mobile: fixed bottom bar, centered, full-width with padding
+      // Desktop: fixed right side, vertically centered
+      className="fixed z-50
+        bottom-4 left-1/2 -translate-x-1/2
+        md:bottom-auto md:left-auto md:right-6 md:top-1/2 md:-translate-x-0 md:-translate-y-1/2"
     >
-      <div className="flex md:flex-col items-center gap-4 p-3 rounded-full glass-card">
+      {/* 
+        Mobile: horizontal pill, constrained width, wraps safely
+        Desktop: vertical pill 
+      */}
+      <div
+        className="flex md:flex-col items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-full glass-card
+        max-w-[calc(100vw-2rem)]   {/* prevents overflow on very small screens */}
+      "
+      >
         <MagneticButton
           href="https://www.linkedin.com/in/shashika-gurunayake"
           label="LinkedIn"
         >
-          <Linkedin className="h-5 w-5" />
+          <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
         </MagneticButton>
+
         <MagneticButton href="https://github.com/SHASHI4368" label="GitHub">
-          <Github className="h-5 w-5" />
+          <Github className="h-4 w-4 sm:h-5 sm:w-5" />
         </MagneticButton>
+
         <MagneticButton
           href="mailto:shashika.b.gurunayake@gmail.com"
           label="Email"
         >
-          <Mail className="h-5 w-5" />
+          <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
         </MagneticButton>
+
         <MagneticButton href="tel:+94773073668" label="Phone">
-          <Phone className="h-5 w-5" />
+          <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
         </MagneticButton>
-        <div className="w-px h-6 md:w-6 md:h-px bg-white/20 mx-1" />
+
+        {/* Separator: horizontal on mobile, vertical on desktop */}
+        <div className="w-px h-5 md:w-5 md:h-px bg-white/20" />
+
         <MagneticButton
           href="https://drive.google.com/file/d/1uWl1Y13zSZLCWH_ax0DCulBJ0E0Kwwx-/view?usp=sharing"
           label="Resume"
         >
-          <FileText className="h-5 w-5" />
+          <FileText className="h-4 w-4 sm:h-5 sm:w-5" />
         </MagneticButton>
       </div>
     </motion.div>

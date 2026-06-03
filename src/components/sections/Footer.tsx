@@ -19,15 +19,18 @@ export function Footer() {
             <br />
             <span className="text-white/50">extraordinary.</span>
           </h2>
-          <div className="flex items-center gap-3">
+          <div className="flex md:flex-row flex-col items-center gap-3">
             <a
               href="mailto:shashika.b.gurunayake@gmail.com"
               className="text-lg text-white/70 hover:text-white transition-colors underline underline-offset-8 decoration-white/20 hover:decoration-white/100 w-fit mx-auto md:mx-0 mt-4"
             >
               shashika.b.gurunayake@gmail.com
             </a>
+            <p className="text-lg md:flex hidden text-white/70 hover:text-white transition-colors  underline-offset-8 decoration-white/20 hover:decoration-white/100 w-fit mx-auto md:mx-0 mt-4">
+              |
+            </p>
             <p className="text-lg text-white/70 hover:text-white transition-colors  underline-offset-8 decoration-white/20 hover:decoration-white/100 w-fit mx-auto md:mx-0 mt-4">
-              | 0773073668
+              +94 77 307 3668
             </p>
           </div>
         </div>
