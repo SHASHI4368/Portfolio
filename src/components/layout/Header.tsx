@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { name: "Stack", href: "#stack" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
+  { name: "Certifications", href: "#certificates" },
 ];
 
 export function Header() {

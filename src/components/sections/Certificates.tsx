@@ -5,23 +5,12 @@ import { Award, ExternalLink } from "lucide-react";
 
 const CERTIFICATES = [
   {
-    name: "AWS Certified Solutions Architect – Professional",
-    institution: "Amazon Web Services",
-    date: "Dec 2023",
-    link: "#"
+    name: "JUnit and Mockito Unit Testing for Java Developers",
+    institution: "Packt",
+    date: "June 2026",
+    link: "https://coursera.org/share/728be6b83ebf624ece026846269930b5",
   },
-  {
-    name: "Certified Kubernetes Administrator (CKA)",
-    institution: "Cloud Native Computing Foundation",
-    date: "Aug 2022",
-    link: "#"
-  },
-  {
-    name: "Google Cloud Professional Cloud Architect",
-    institution: "Google Cloud",
-    date: "Mar 2021",
-    link: "#"
-  }
+
 ];
 
 export function Certificates() {

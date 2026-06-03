@@ -15,15 +15,24 @@ export function Footer() {
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between z-10 relative">
         <div className="flex flex-col mb-8 md:mb-0 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-white mb-2">
-            Let's build something <br />
+            {`Let's build something `}
+            <br />
             <span className="text-white/50">extraordinary.</span>
           </h2>
-          <a href="mailto:hello@example.com" className="text-lg text-white/70 hover:text-white transition-colors underline underline-offset-8 decoration-white/20 hover:decoration-white/100 w-fit mx-auto md:mx-0 mt-4">
-            hello@example.com
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="mailto:shashika.b.gurunayake@gmail.com"
+              className="text-lg text-white/70 hover:text-white transition-colors underline underline-offset-8 decoration-white/20 hover:decoration-white/100 w-fit mx-auto md:mx-0 mt-4"
+            >
+              shashika.b.gurunayake@gmail.com
+            </a>
+            <p className="text-lg text-white/70 hover:text-white transition-colors  underline-offset-8 decoration-white/20 hover:decoration-white/100 w-fit mx-auto md:mx-0 mt-4">
+              | 0773073668
+            </p>
+          </div>
         </div>
 
-        <button 
+        <button
           onClick={scrollToTop}
           className="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/5 hover:border-white/30 transition-all duration-300 group"
         >
@@ -32,11 +41,24 @@ export function Footer() {
       </div>
 
       <div className="w-full max-w-7xl mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-sm text-white/40 z-10 relative">
-        <p>© {new Date().getFullYear()} John Doe. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} Shashika Gurunayake. All rights reserved.
+        </p>
         <div className="flex gap-6 mt-4 md:mt-0">
-          <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-          <a href="#" className="hover:text-white transition-colors">GitHub</a>
-          <a href="#" className="hover:text-white transition-colors">Twitter</a>
+          <a
+            href="https://www.linkedin.com/in/shashika-gurunayake"
+            target="_blank"
+            className="hover:text-white transition-colors"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/SHASHI4368"
+            target="_blank"
+            className="hover:text-white transition-colors"
+          >
+            GitHub
+          </a>
         </div>
       </div>
     </footer>
