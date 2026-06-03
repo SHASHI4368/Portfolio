@@ -9,10 +9,10 @@ const CATEGORIES = ["All", "Frontend", "Backend", "Fullstack", "AI", "Cybersecur
 const PROJECTS = [
   {
     id: 1,
-    title: "Aura UI Library",
-    description: "A premium headless component library built for Next.js with advanced WebGL interactions.",
+    title: "JobKindle Hiring Platform",
+    description: "An AI-driven recruitment platform that streamlines candidate sourcing, screening, and engagement for tech companies.",
     category: "Frontend",
-    tech: ["Next.js", "Framer Motion", "Three.js"],
+    tech: ["Next.js", "ShadCN UI"],
     github: "#",
     live: "#"
   },

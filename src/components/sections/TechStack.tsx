@@ -4,21 +4,52 @@ import { motion } from "framer-motion";
 
 const STACK_CATEGORIES = [
   {
-    title: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "WebGL", "Three.js"]
+    title: "Programming Languages",
+    skills: [
+      "Java",
+      "Python",
+      "C/C++",
+      "C#",
+      "Haskell",
+      "JavaScript",
+      "Assembly",
+      "Verilog",
+      "VHDL",
+    ],
   },
   {
-    title: "Backend",
-    skills: ["Node.js", "Express", "Spring Boot", "Java", "Python"]
+    title: "Frontend & UI Frameworks",
+    skills: [
+      "React.js",
+      "Next.js",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "MUI",
+      "Shadcn UI",
+      "WPF",
+    ],
   },
   {
-    title: "Database & Cloud",
-    skills: ["PostgreSQL", "MongoDB", "Redis", "AWS", "Vercel"]
+    title: "Backend Frameworks & DBs",
+    skills: ["SpringBoot", "Node.js", "Express.js", "MySQL", "MongoDB"],
   },
   {
-    title: "DevOps & Tools",
-    skills: ["Docker", "Kubernetes", "Git", "Linux", "Cisco"]
-  }
+    title: "DevOps & Version Control",
+    skills: [
+      "Git",
+      "GitHub",
+      "Bitbucket",
+      "SourceTree",
+      "Jira",
+      "Linux",
+      "Windows",
+    ],
+  },
+  {
+    title: "Engineering Tools & Software",
+    skills: ["ModelSim", "AutoCAD", "Microsoft Clipchamp"],
+  },
 ];
 
 export function TechStack() {

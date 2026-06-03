@@ -121,10 +121,10 @@ export function ScrollyCanvas() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pointer-events-none">
           <motion.div style={{ opacity: opacity1, y: y1 }} className="absolute inset-x-0 top-1/2 -translate-y-1/2 px-6">
             <h1 className="text-5xl md:text-8xl font-medium tracking-tighter text-white mb-4 drop-shadow-2xl">
-              John Doe
+              Shashika Gurunayake
             </h1>
             <p className="text-xl md:text-3xl text-white/70 font-light tracking-wide">
-              Creative Developer
+              Computer Engineer
             </p>
           </motion.div>
 

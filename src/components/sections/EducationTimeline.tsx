@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 
 const EDUCATION = [
   {
-    degree: "M.S. Computer Science",
-    university: "Stanford University",
-    duration: "2018 - 2020",
-    description: "Specialization in Human-Computer Interaction and Computer Graphics. Graduated with Honors.",
+    degree: "Bsc (Hons) in Engineering",
+    university: "Faculty of Engineering, University of Ruhuna",
+    duration: "2021 - 2026",
+    description: "Specialization in Computer Engineering with a CGPA of 3.79/4.0",
   },
   {
-    degree: "B.S. Software Engineering",
-    university: "University of California, Berkeley",
-    duration: "2014 - 2018",
-    description: "Core coursework in Data Structures, Algorithms, Web Architecture, and UI/UX Design.",
+    degree: "GCE A/L in Physical Science",
+    university: "St.Sylvester's College, Kandy",
+    duration: "2017 - 2019",
+    description: "2A's and B with Z-score 1.9611. Ranked 51st in the District.",
   }
 ];
 

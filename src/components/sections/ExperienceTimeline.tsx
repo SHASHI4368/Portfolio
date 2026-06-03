@@ -4,26 +4,13 @@ import { motion } from "framer-motion";
 
 const EXPERIENCES = [
   {
-    role: "Senior Creative Developer",
-    company: "Acme Corp",
-    duration: "2021 - Present",
-    description: "Leading frontend architecture and building high-performance web experiences with Next.js and WebGL. Improved core web vitals by 40% across flagship products.",
-    tech: ["Next.js", "TypeScript", "Three.js", "Framer Motion"]
+    role: "Intern Software Engineer",
+    company: "APP360 Pvt Ltd",
+    duration: "2024 - 2025",
+    description:
+      "Developed and optimized diverse web applications, including building the full frontend for a custom retail POS system (CSV360), upgrading a universal clipboard app (Magic Copy) with 100k+ users for production stability, delivering client features for a gym management platform (Fit360), migrating a streaming platform (CodingRadio) to Next.js for better performance, and building a full-stack code snippet manager.",
+    tech: ["Next.js", "React.js", "Shadcn UI", "MongoDB", "Node.js", "EJS"],
   },
-  {
-    role: "Frontend Engineer",
-    company: "Globex Inc",
-    duration: "2018 - 2021",
-    description: "Developed scalable UI component libraries. Collaborated closely with the design team to implement award-winning interactive interfaces.",
-    tech: ["React", "JavaScript", "Tailwind CSS", "Redux"]
-  },
-  {
-    role: "Web Developer",
-    company: "Initech",
-    duration: "2016 - 2018",
-    description: "Built and maintained multiple client-facing websites. Focused on accessibility, performance optimization, and responsive design.",
-    tech: ["HTML/CSS", "Vanilla JS", "PHP", "WordPress"]
-  }
 ];
 
 export function ExperienceTimeline() {
@@ -37,7 +24,9 @@ export function ExperienceTimeline() {
           transition={{ duration: 0.8 }}
           className="mb-16 md:mb-24"
         >
-          <h2 className="text-sm tracking-[0.3em] uppercase text-white/50 mb-4">Journey</h2>
+          <h2 className="text-sm tracking-[0.3em] uppercase text-white/50 mb-4">
+            Journey
+          </h2>
           <h3 className="text-4xl md:text-6xl font-medium tracking-tight text-white">
             Experience
           </h3>
@@ -55,10 +44,12 @@ export function ExperienceTimeline() {
             >
               {/* Timeline dot */}
               <div className="absolute left-[-5px] top-2 w-[11px] h-[11px] rounded-full bg-white/20 border-2 border-[#121212] group-hover:bg-white group-hover:scale-150 transition-all duration-300" />
-              
+
               <div className="glass-card p-6 md:p-8 rounded-2xl glow-effect hover:-translate-y-1 transition-transform duration-500">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-                  <h4 className="text-xl md:text-2xl font-medium text-white">{exp.role}</h4>
+                  <h4 className="text-xl md:text-2xl font-medium text-white">
+                    {exp.role}
+                  </h4>
                   <span className="text-sm text-white/50 font-mono bg-white/5 px-3 py-1 rounded-full w-fit">
                     {exp.duration}
                   </span>
@@ -68,8 +59,11 @@ export function ExperienceTimeline() {
                   {exp.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {exp.tech.map(t => (
-                    <span key={t} className="text-xs text-white/40 uppercase tracking-wider bg-white/5 px-2 py-1 rounded">
+                  {exp.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="text-xs text-white/40 uppercase tracking-wider bg-white/5 px-2 py-1 rounded"
+                    >
                       {t}
                     </span>
                   ))}
