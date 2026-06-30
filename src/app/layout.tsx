@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Creative Developer | Portfolio",
-  description: "Ultra-modern dark-themed cinematic personal portfolio",
+  title: "Shashika Gurunayake | Portfolio",
+  description: "Portfolio of Shashika Gurunayake, a software engineer specializing in web development.",
 };
 
 export default function RootLayout({
