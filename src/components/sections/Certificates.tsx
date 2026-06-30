@@ -10,7 +10,12 @@ const CERTIFICATES = [
     date: "June 2026",
     link: "https://coursera.org/share/728be6b83ebf624ece026846269930b5",
   },
-
+  {
+    name: "Spring - Ecosystem and Core",
+    institution: "LearnQuest",
+    date: "June 2026",
+    link: "https://coursera.org/share/bc8c2c2e076f4ca5dad4ee9ada559df2",
+  },
 ];
 
 export function Certificates() {
