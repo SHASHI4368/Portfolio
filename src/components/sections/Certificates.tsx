@@ -16,6 +16,12 @@ const CERTIFICATES = [
     date: "June 2026",
     link: "https://coursera.org/share/bc8c2c2e076f4ca5dad4ee9ada559df2",
   },
+  {
+    name: "Spring MVC, Spring Boot and Rest Controllers",
+    institution: "LearnQuest",
+    date: "July 2026",
+    link: "https://coursera.org/share/a6c51279f0ca3e2596160786e2c243a0",
+  },
 ];
 
 export function Certificates() {
