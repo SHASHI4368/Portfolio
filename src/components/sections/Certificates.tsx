@@ -22,6 +22,12 @@ const CERTIFICATES = [
     date: "July 2026",
     link: "https://coursera.org/share/a6c51279f0ca3e2596160786e2c243a0",
   },
+  {
+    name: "Spring Data Repositories",
+    institution: "LearnQuest",
+    date: "July 2026",
+    link: "https://coursera.org/share/4084ed56326de06610b95beff9ee8e6d",
+  },
 ];
 
 export function Certificates() {
