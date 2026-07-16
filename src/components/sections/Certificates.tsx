@@ -28,6 +28,12 @@ const CERTIFICATES = [
     date: "July 2026",
     link: "https://coursera.org/share/4084ed56326de06610b95beff9ee8e6d",
   },
+  {
+    name: "Full-Stack React with Spring Boot: Unit 1",
+    institution: "Pearson",
+    date: "July 2026",
+    link: "https://coursera.org/share/29bfd7488b1590ebf8adae100beff2a4",
+  },
 ];
 
 export function Certificates() {
