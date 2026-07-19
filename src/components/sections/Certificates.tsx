@@ -34,6 +34,12 @@ const CERTIFICATES = [
     date: "July 2026",
     link: "https://coursera.org/share/29bfd7488b1590ebf8adae100beff2a4",
   },
+  {
+    name: "Full-Stack React with Spring Boot: Unit 2",
+    institution: "Pearson",
+    date: "July 2026",
+    link: "https://coursera.org/share/a508b97ae814ff01da8cdc65dd732201",
+  },
 ];
 
 export function Certificates() {
@@ -47,7 +53,9 @@ export function Certificates() {
           transition={{ duration: 0.8 }}
           className="mb-16 md:mb-24"
         >
-          <h2 className="text-sm tracking-[0.3em] uppercase text-white/50 mb-4">Credentials</h2>
+          <h2 className="text-sm tracking-[0.3em] uppercase text-white/50 mb-4">
+            Credentials
+          </h2>
           <h3 className="text-4xl md:text-6xl font-medium tracking-tight text-white">
             Certifications
           </h3>
@@ -67,17 +75,18 @@ export function Certificates() {
                 <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white/50 group-hover:bg-white group-hover:text-black transition-colors duration-500">
                   <Award className="w-6 h-6" />
                 </div>
-                <a href={cert.link} className="text-white/30 hover:text-white transition-colors">
+                <a
+                  href={cert.link}
+                  className="text-white/30 hover:text-white transition-colors"
+                >
                   <ExternalLink className="w-5 h-5" />
                 </a>
               </div>
-              
+
               <h4 className="text-lg font-medium text-white mb-2 leading-tight">
                 {cert.name}
               </h4>
-              <p className="text-white/60 text-sm mb-4">
-                {cert.institution}
-              </p>
+              <p className="text-white/60 text-sm mb-4">{cert.institution}</p>
               <span className="text-xs text-white/40 uppercase tracking-widest bg-white/5 px-2 py-1 rounded w-fit">
                 {cert.date}
               </span>
