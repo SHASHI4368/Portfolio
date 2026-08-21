@@ -141,7 +141,7 @@ export function FloatingDock() {
         <div className="w-px h-5 md:w-5 md:h-px bg-white/20" />
 
         <MagneticButton
-          href="https://drive.google.com/file/d/1da1Dh8DXYdZqN9DP1GUkUnDvRBCUXpK0/view?usp=sharing"
+          href="https://drive.google.com/file/d/14xWL8jk5atEq7iE33f2-BzpXGk7N2H4D/view?usp=sharing"
           label="Resume"
         >
           <FileText className="h-4 w-4 sm:h-5 sm:w-5" />
