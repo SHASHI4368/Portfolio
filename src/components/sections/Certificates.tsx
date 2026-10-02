@@ -40,6 +40,12 @@ const CERTIFICATES = [
     date: "July 2026",
     link: "https://coursera.org/share/a508b97ae814ff01da8cdc65dd732201",
   },
+  {
+    name: "Scala Fundamentals",
+    institution: "Packt",
+    date: "October 2026",
+    link: "https://coursera.org/share/eb15558185222cb5943fe0d9910ba525",
+  },
 ];
 
 export function Certificates() {
